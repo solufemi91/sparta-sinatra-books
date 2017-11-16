@@ -1,8 +1,8 @@
 
 <h1>Welcome to the books page</h1>
-<% @photos.each do |photo|  %>
+<% @books.each do |book|  %>
       <div>
-        <h3><a href="/photos/<%= photo[:id]%>"><%= photo[:title] %> </a></h3>
-        <img src="<%= photo[:image] %>" alt="">
+        <h3><a href="/books/<%= book[:id]%>"><%= book[:title] %> </a></h3>
+        <img src="<%= book[:image] %>" alt="">
       </div>
     <% end %>

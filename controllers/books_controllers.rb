@@ -7,7 +7,7 @@ class BooksController < Sinatra::Base
     register Sinatra::Reloader
  end
 
- $photos = [{
+ $books = [{
  id: 0,
  title: "A Streetcar Named Desire",
  body: "This is the first post",
@@ -35,7 +35,7 @@ class BooksController < Sinatra::Base
 
  get "/books" do
    @title = "The books page"
-   @photos = $photos
+   @books = $books
    erb :'books/index'
  end
 
