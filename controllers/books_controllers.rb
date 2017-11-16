@@ -1,6 +1,7 @@
 class BooksController < Sinatra::Base
 
  set :root, File.join(File.dirname(__FILE__), "..")
+ set :views, Proc.new { File.join(root, "views") }
 
  configure :development do
     register Sinatra::Reloader
@@ -8,6 +9,7 @@ class BooksController < Sinatra::Base
 
  get "/" do
    "This is my homepage"
+    erb :'books/home'
  end
 
 
