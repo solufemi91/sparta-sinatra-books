@@ -9,22 +9,22 @@ class BooksController < Sinatra::Base
 
  $photos = [{
  id: 0,
- title: "Book 1",
+ title: "A Streetcar Named Desire",
  body: "This is the first post",
- image: "http://fillmurray.com/300/300"
+ image: "https://i.ebayimg.com/images/g/03IAAOSw4CFY0L30/s-l300.jpg"
 
 },
 {
   id: 1,
-  title: "Book 2",
+  title: "To Kill a MockingBird",
   body: "This is the second post",
-  image: "http://fillmurray.com/300/300"
+  image: "https://ritikab.files.wordpress.com/2010/07/tokillamockingbird3.jpg"
 },
 {
   id: 2,
-  title: "Book 3",
+  title: "1000 Years of Solitude",
   body: "This is the third post",
-  image: "http://fillmurray.com/300/300"
+  image: "https://images-na.ssl-images-amazon.com/images/I/41NpPQ3HNqL._SL300_.jpg"
 }]
 
  get "/" do
