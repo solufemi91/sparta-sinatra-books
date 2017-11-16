@@ -14,7 +14,8 @@ class BooksController < Sinatra::Base
 
 
  get "/books" do
-   "This is the books page"
+   @title = "The books page"
+   erb :'books/index'
  end
 
  get "/books/new" do
