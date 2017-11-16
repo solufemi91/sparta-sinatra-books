@@ -8,7 +8,7 @@ class BooksController < Sinatra::Base
  end
 
  get "/" do
-   "This is my homepage"
+    @title = "Books Homepage"
     erb :'books/home'
  end
 
@@ -23,13 +23,6 @@ class BooksController < Sinatra::Base
 
  end
 
- # get "/books/:id" do
- #
- #    id = params[:id]
- #    @book = $books[id]
- #
- #
- # end
 
  post '/books' do
 
@@ -37,24 +30,7 @@ class BooksController < Sinatra::Base
 
  end
 
- # put '/books/:id'  do
- #
- #  "UPDATE: #{params[:id]}"
- #
- # end
 
- # delete '/books/:id'  do
- #
- #    "DELETE: #{params[:id]}"
- #
- # end
-
- # get '/books/:id/edit'  do
- #
- #    "EDIT: #{params[:id]}"
- #
- #
- # end
 
 
 end
