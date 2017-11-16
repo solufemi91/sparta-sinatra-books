@@ -7,6 +7,26 @@ class BooksController < Sinatra::Base
     register Sinatra::Reloader
  end
 
+ $photos = [{
+ id: 0,
+ title: "Photo 1",
+ body: "This is the first post",
+ image: "http://fillmurray.com/300/300"
+
+},
+{
+  id: 1,
+  title: "Photo 2",
+  body: "This is the second post",
+  image: "http://fillmurray.com/300/300"
+},
+{
+  id: 2,
+  title: "Photo 3",
+  body: "This is the third post",
+  image: "http://fillmurray.com/300/300"
+}]
+
  get "/" do
     @title = "Books Homepage"
     erb :'books/home'
