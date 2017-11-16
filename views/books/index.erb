@@ -1,2 +1,8 @@
 
 <h1>Welcome to the books page</h1>
+<% @photos.each do |photo|  %>
+      <div>
+        <h3><a href="/photos/<%= photo[:id]%>"><%= photo[:title] %> </a></h3>
+        <img src="<%= photo[:image] %>" alt="">
+      </div>
+    <% end %>

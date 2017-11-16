@@ -9,20 +9,20 @@ class BooksController < Sinatra::Base
 
  $photos = [{
  id: 0,
- title: "Photo 1",
+ title: "Book 1",
  body: "This is the first post",
  image: "http://fillmurray.com/300/300"
 
 },
 {
   id: 1,
-  title: "Photo 2",
+  title: "Book 2",
   body: "This is the second post",
   image: "http://fillmurray.com/300/300"
 },
 {
   id: 2,
-  title: "Photo 3",
+  title: "Book 3",
   body: "This is the third post",
   image: "http://fillmurray.com/300/300"
 }]
@@ -35,6 +35,7 @@ class BooksController < Sinatra::Base
 
  get "/books" do
    @title = "The books page"
+   @photos = $photos
    erb :'books/index'
  end
 
