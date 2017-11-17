@@ -41,16 +41,19 @@ class BooksController < Sinatra::Base
 
  get "/books/new" do
 
-    "New books form"
+    @title = "The new books form"
+    erb :'books/new'
 
  end
 
+ get "/books/:id" do
 
- post '/books' do
+   id = params[:id].to_i
+   @book = $books[id]
 
-    "CREATE"
-
+   erb :'books/show'
  end
+
 
 
 
