@@ -54,6 +54,13 @@ class BooksController < Sinatra::Base
    erb :'books/show'
  end
 
+ get '/books/:id/edit'  do
+
+
+  erb :'books/edit'
+
+end
+
 
 
 
