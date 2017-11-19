@@ -74,9 +74,21 @@ class BooksController < Sinatra::Base
  get '/:id/edit'  do
   @title = "The edit books form"
 
+  id = params[:id].to_i
+
   @post = Post.new
 
   erb :'books/edit'
+
+ end
+
+ delete '/:id'  do
+
+  id = params[:id].to_i
+
+  Post.destroy(id)
+
+  redirect "/"
 
  end
 

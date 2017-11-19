@@ -2,3 +2,7 @@
 <p><%= @post.body %></p>
 <img src="<%= @post.image %>" alt="image is not here">
 <a href="/<%= @post.id %>/edit">Edit</a>
+<form action="<%= @post.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" name="name" value="Delete">
+</form>
