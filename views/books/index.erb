@@ -3,6 +3,6 @@
 <% @posts.each do |post|  %>
       <div class="bookpost">
         <h3><a href="/<%= post.id%>"><%= post.title %> </a></h3>
-        <img src="<%= post.image %>" alt="image does not exist">
+        <img class="bookcover" src="<%= post.image %>" alt="image does not exist">
       </div>
     <% end %>
