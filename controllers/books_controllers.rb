@@ -53,6 +53,7 @@ class BooksController < Sinatra::Base
 
      post.title = params[:title]
      post.body = params[:body]
+     post.image = params[:image]
 
      post.save
 
