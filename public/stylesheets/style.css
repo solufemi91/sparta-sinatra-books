@@ -1,11 +1,32 @@
+
+body{
+
+   font-family: "Arial"
+
+
+}
+
+
 h1{
-  color:red;
-  background-color: black;
+  color: red;
+  border-radius: 9px;
+  background-color: #00000085;
+
 }
 
 a{
   color: red;
-  background-color: black;
+  text-decoration: none;
+  margin: 11px;
+
+}
+
+h3{
+  color: blue;
+}
+
+.bookpost{
+  margin-left: 44%;
 }
 
 #worldBook {
