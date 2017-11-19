@@ -71,15 +71,6 @@ class BooksController < Sinatra::Base
   end
 
 
-
- get "/:id" do
-
-   id = params[:id].to_i
-   @book = $books[id]
-
-   erb :'books/show'
- end
-
  get '/:id/edit'  do
 
 
