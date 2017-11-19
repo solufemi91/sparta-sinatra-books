@@ -70,13 +70,30 @@ class BooksController < Sinatra::Base
      redirect "/"
   end
 
+  put '/:id'  do
+
+    id = params[:id].to_i
+
+    post = Post.find(id)
+
+    post.id = params[:id]
+    post.title = params[:title]
+    post.body = params[:body]
+    post.image = params[:image]
+
+    post.save
+
+    redirect '/'
+
+  end
+
 
  get '/:id/edit'  do
   @title = "The edit books form"
 
   id = params[:id].to_i
 
-  @post = Post.new
+  @post = Post.find(id)
 
   erb :'books/edit'
 
