@@ -47,6 +47,16 @@ class BooksController < Sinatra::Base
 
  end
 
+ get '/:id' do
+
+    id = params[:id].to_i
+
+    @post = Post.find(id)
+
+    erb :'books/show'
+
+  end
+
  post '/' do
 
      post = Post.new
