@@ -12,7 +12,7 @@ class Post
       sql = "UPDATE bookposts SET title='#{self.title}', body='#{self.body}', image='#{self.image}' WHERE id = #{self.id}"
 
     else
-      sql = "INSERT INTO bookposts (title, body) VALUES ('#{self.title}', '#{self.body}','#{self.image}')"
+      sql = "INSERT INTO bookposts (title, body, image) VALUES ('#{self.title}', '#{self.body}','#{self.image}')"
     end
 
 
