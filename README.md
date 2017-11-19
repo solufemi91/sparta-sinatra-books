@@ -59,3 +59,15 @@ Your site will need to have the following:-
 *Deliverables*
 
 Our aim is to delivery working code. Work on little sections of functionality and only commit when something is working. This means you have always got something that is working in your last commit. You might not complete all the points above but what you do delivery it will be working.
+
+## What I managed to deliver
+
+I managed to deliver 10/10 of the deliverables
+
+## What went well
+
+I pleased with the styling that I did. I think it is an improvement on what I initially submitted. I am also pleased with all of the restful routes are operating correctly.
+
+## Issue I had
+
+One of the issues that I had was getting the images to appear when a new post was submitted, however I managed to eventually resolve this after getting assistance from my trainer.
