@@ -27,26 +27,26 @@ class BooksController < Sinatra::Base
   image: "https://images-na.ssl-images-amazon.com/images/I/41NpPQ3HNqL._SL300_.jpg"
 }]
 
+ # get "/" do
+ #    @title = "Books Homepage"
+ #    erb :'books/home'
+ # end
+
+
  get "/" do
-    @title = "Books Homepage"
-    erb :'books/home'
- end
-
-
- get "/books" do
    @title = "The books page"
    @books = $books
    erb :'books/index'
  end
 
- get "/books/new" do
+ get "/new" do
 
     @title = "The new books form"
     erb :'books/new'
 
  end
 
- get "/books/:id" do
+ get "/:id" do
 
    id = params[:id].to_i
    @book = $books[id]
@@ -54,7 +54,7 @@ class BooksController < Sinatra::Base
    erb :'books/show'
  end
 
- get '/books/:id/edit'  do
+ get '/:id/edit'  do
 
 
   erb :'books/edit'
