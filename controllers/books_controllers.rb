@@ -27,11 +27,7 @@ class BooksController < Sinatra::Base
   image: "https://images-na.ssl-images-amazon.com/images/I/41NpPQ3HNqL._SL300_.jpg"
 }]
 
- # get "/" do
- #    @title = "Books Homepage"
- #    erb :'books/home'
- # end
-
+ 
 
  get "/" do
    @title = "The books page"
