@@ -72,11 +72,13 @@ class BooksController < Sinatra::Base
 
 
  get '/:id/edit'  do
+  @title = "The edit books form"
 
+  @post = Post.new
 
   erb :'books/edit'
 
-end
+ end
 
 
 
