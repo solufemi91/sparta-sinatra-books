@@ -1,7 +1,6 @@
 class Post
   attr_accessor :id, :title, :body, :image
 
-  # Save is an instance method that we can use to create or update a post
   def save
 
 

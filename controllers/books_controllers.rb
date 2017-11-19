@@ -10,43 +10,44 @@ class BooksController < Sinatra::Base
 
  get "/" do
    @title = "The books page"
-  #  @books = $books
-  @posts = Post.all
+
+   @posts = Post.all
    erb :'books/index'
  end
 
  get "/new" do
 
-    @title = "The new books form"
+   @title = "The new books form"
 
-    @post = Post.new
+   @post = Post.new
 
-
-    erb :'books/new'
+   erb :'books/new'
 
  end
 
  get '/:id' do
 
-    id = params[:id].to_i
+   id = params[:id].to_i
 
-    @post = Post.find(id)
+   @post = Post.find(id)
 
-    erb :'books/show'
+   erb :'books/show'
 
   end
 
  post '/' do
 
-     post = Post.new
+   post = Post.new
 
-     post.title = params[:title]
-     post.body = params[:body]
-     post.image = params[:image]
+   post.title = params[:title]
 
-     post.save
+   post.body = params[:body]
 
-     redirect "/"
+   post.image = params[:image]
+
+   post.save
+
+   redirect "/"
   end
 
   put '/:id'  do
@@ -56,8 +57,11 @@ class BooksController < Sinatra::Base
     post = Post.find(id)
 
     post.id = params[:id]
+
     post.title = params[:title]
+
     post.body = params[:body]
+
     post.image = params[:image]
 
     post.save
@@ -68,13 +72,13 @@ class BooksController < Sinatra::Base
 
 
  get '/:id/edit'  do
-  @title = "The edit books form"
+   @title = "The edit books form"
 
-  id = params[:id].to_i
+   id = params[:id].to_i
 
-  @post = Post.find(id)
+   @post = Post.find(id)
 
-  erb :'books/edit'
+   erb :'books/edit'
 
  end
 
@@ -87,9 +91,6 @@ class BooksController < Sinatra::Base
   redirect "/"
 
  end
-
-
-
 
 
 end
