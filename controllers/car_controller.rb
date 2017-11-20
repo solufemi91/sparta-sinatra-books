@@ -9,14 +9,10 @@ class CarController < Sinatra::Base
 
   get "/cars" do
 
-    # @title = "Car homepage"
-    "This is a list of cars"
+    @title = "Car homepage"
+    @cars = Car.all
+
     erb :'cars/index'
-
-
-
-
-
 
   end
 
