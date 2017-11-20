@@ -13,15 +13,4 @@ insert into bookposts (title,body,image) values ('A Streetcar Named Desire','Thi
 insert into bookposts (title,body,image) values ('To Kill a MockingBird', 'This is the second post', 'https://ritikab.files.wordpress.com/2010/07/tokillamockingbird3.jpg');
 insert into bookposts (title,body,image) values ('1000 Years of Solitude','This is the third post','https://images-na.ssl-images-amazon.com/images/I/41NpPQ3HNqL._SL300_.jpg');
 
-  DROP TABLE IF EXISTS cars;
-
-  CREATE TABLE cars (
-
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(255),
-    body TEXT,
-    image TEXT
-
-  );
-
-  insert into cars (title,body,image) values ('BMW','This is the first post','https://www.autocar.co.uk/sites/autocar.co.uk/files/bmw-1-series-2015-rt-021.jpg');
+  

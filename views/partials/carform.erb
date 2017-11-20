@@ -1,0 +1,21 @@
+<form action="/<%= @car.id %>" method="POST">
+  <div>
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Enter a title" value="<%= @car.title %>">
+  </div>
+  <div>
+    <label>Body</label>
+    <textarea name="body" rows="8" cols="40" placeholder="The body of the post"><%= @car.body %></textarea>
+  </div>
+  <div>
+    <label>Image Link</label>
+    <input type="text" name="image" placeholder="Enter the link of the image of the book" value="<%= @car.image %>">
+  </div>
+  <div>
+    <input type="submit" value="Save Post">
+  </div>
+  <% if(@car.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+
+</form>

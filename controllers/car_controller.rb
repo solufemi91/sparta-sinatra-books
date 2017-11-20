@@ -17,4 +17,15 @@ class CarController < Sinatra::Base
   end
 
 
+  get "/cars/new" do
+
+    @title = "The new cars form"
+
+    @car = Car.new
+
+    erb :'cars/new'
+
+  end
+
+
 end
