@@ -37,20 +37,22 @@ class CarController < Sinatra::Base
 
   end
 
-  post '/' do
-
-    car = Car.new
-
-    car.title = params[:title]
-
-    car.body = params[:body]
-
-    car.image = params[:image]
-
-    post.save
-
-    redirect "/cars"
-   end
+  # post '/' do
+  #
+  #   car = Car.new
+  #
+  #   car.title = params[:title]
+  #
+  #   car.body = params[:body]
+  #
+  #   car.image = params[:image]
+  #
+  #   post.save
+  #
+  #   redirect "/"
+  #
+  #
+  #  end
 
 
 end
