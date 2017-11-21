@@ -27,5 +27,30 @@ class CarController < Sinatra::Base
 
   end
 
+  get '/cars/:id' do
+
+    id = params[:id].to_i
+
+    @car = Car.find(id)
+
+    erb :'cars/show'
+
+  end
+
+  post '/' do
+
+    car = Car.new
+
+    car.title = params[:title]
+
+    car.body = params[:body]
+
+    car.image = params[:image]
+
+    post.save
+
+    redirect "/cars"
+   end
+
 
 end

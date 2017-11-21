@@ -8,10 +8,10 @@ class Car
 
 
     if(self.id)
-      sql = "UPDATE bookposts SET title='#{self.title}', body='#{self.body}', image='#{self.image}' WHERE id = #{self.id}"
+      sql = "UPDATE cars SET title='#{self.title}', body='#{self.body}', image='#{self.image}' WHERE id = #{self.id}"
 
     else
-      sql = "INSERT INTO bookposts (title, body, image) VALUES ('#{self.title}', '#{self.body}',' #{self.image}')"
+      sql = "INSERT INTO carss (title, body, image) VALUES ('#{self.title}', '#{self.body}',' #{self.image}')"
     end
 
 
@@ -50,16 +50,16 @@ class Car
     conn = self.open_connection
 
 
-    sql = "SELECT * FROM bookposts WHERE id =#{id} LIMIT 1"
+    sql = "SELECT * FROM cars WHERE id =#{id} LIMIT 1"
 
 
-    posts = conn.exec(sql)
+    cars = conn.exec(sql)
 
 
-    post = self.hydrate(posts[0])
+    car = self.hydrate(cars[0])
 
 
-    post
+    car
 
   end
 
