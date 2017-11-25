@@ -1,0 +1,8 @@
+<%= erb(:'partials/carsnavigation', :layout => false) %>
+<h1>The car index page</h1>
+<% @cars.each do |car|  %>
+      <div class="bookpost">
+        <h3><a href="/cars/<%= car.id%>"><%= car.title %> </a></h3>
+        <img class="bookcover" src="<%= car.image %>" alt="image does not exist">
+      </div>
+    <% end %>

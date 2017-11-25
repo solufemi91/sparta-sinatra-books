@@ -1,0 +1,9 @@
+<%= erb(:'partials/carsnavigation', :layout => false) %>
+<h1><%= @car.title  %></h1>
+<p><%= @car.body %></p>
+<img src="<%= @car.image %>" alt="image is not here">
+<a href="/<%= @car.id %>/edit">Edit for cars</a>
+<form action="<%= @car.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" name="name" value="Delete">
+</form>
